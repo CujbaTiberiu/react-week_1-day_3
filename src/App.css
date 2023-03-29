@@ -32,7 +32,33 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgb(18, 17, 17);
+  color: white;
+}
+
+footer div {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+}
+
+.card-body {
+  height: 400px;
+}
+
+.card img {
+  height: 300px !important;
+  object-fit: cover;
 }

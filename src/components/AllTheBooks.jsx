@@ -26,7 +26,7 @@ class AllTheBooks extends Component{
       <Card.Body className="d-flex flex-column justify-content-between">
         <Card.Title>{book.title}</Card.Title>
         <Card.Text>
-          Category - {book.category} <br /> Price - {book.price}$
+          Category - <span className="fw-bold">{book.category}</span> <br /> Price - <span className="fw-bold">{book.price}$</span>
         </Card.Text>
         <Button variant="primary">Buy now!</Button>
       </Card.Body>

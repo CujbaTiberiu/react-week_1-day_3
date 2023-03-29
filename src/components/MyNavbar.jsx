@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar'
 class MyNavbar extends Component {
     render(){
         return (
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="sticky-top">
             <Container fluid>
               <Navbar.Brand href="#home">
                 Epic Bookstore

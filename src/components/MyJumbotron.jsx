@@ -11,7 +11,7 @@ class MyJumbotron extends Component{
                 <Row>
                     <Col>
                     <h1>Welcome to Epic Bookstore!</h1>
-                    <p>where all your lecture are EPIC!</p>
+                    <p>where all your lectures are EPIC!</p>
                     </Col>
                 </Row>
             </Container>

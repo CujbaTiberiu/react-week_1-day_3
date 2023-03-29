@@ -20,7 +20,7 @@ class AllTheBooks extends Component{
                 <Row>
             { allBooks.map(book => { 
                 return(         
-                    <Col key={book.asin} xs={12} md={4} lg={3} className="gy-2">
+                    <Col key={book.asin} xs={12} sm={6} md={4} lg={3} className="gy-2">
             <Card>
       <Card.Img variant="top" src={book.img} />
       <Card.Body className="d-flex flex-column justify-content-between">

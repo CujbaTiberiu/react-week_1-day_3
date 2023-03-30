@@ -1,7 +1,6 @@
 import { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SingleBook from "./SingleBook";
-import fantasy from '../data/fantasy.json'
 import Form from 'react-bootstrap/Form'
 
 
@@ -10,12 +9,12 @@ class BookList extends Component{
 
     state = {
         search: '',
-        filteredBooks: fantasy
+        filteredBooks: this.props.books
     }
 
     funcSearch = e => {
         const search = e.target.value
-        const filteredBooks = fantasy.filter(book =>
+        const filteredBooks = this.props.books.filter(book =>
             book.title.toLowerCase().includes(search.toLowerCase())
           );//toLowerCase su entrambi cosi sicuramente non sarà case sensitive
           this.setState({ search, filteredBooks });

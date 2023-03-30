@@ -4,6 +4,9 @@ import MyNavbar from './components/MyNavbar';
 import MyFooter from './components/MyFooter';
 import MyJumbotron from './components/MyJumbotron';
 import BookList from './components/BookList';
+//import fantasy from './data/fantasy.json'
+//import scifi from './data/scifi.json'
+import history from './data/history.json'
 
 
 function App() {
@@ -13,7 +16,7 @@ function App() {
       <div className='bg-warning p-5'>
         <MyJumbotron />
       </div>
-      <BookList />
+      <BookList books={history} />
       <div className='div__footer'>
         <MyFooter paraFooter="All rights reserved" mail="EpicBookstore@epicmail.com" />
       </div>

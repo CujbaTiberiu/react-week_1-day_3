@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MyNavbar from './components/MyNavbar';
 import MyFooter from './components/MyFooter';
 import MyJumbotron from './components/MyJumbotron';
-import AllTheBooks from './components/AllTheBooks';
+import BookList from './components/BookList';
 
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
       <div className='bg-warning p-5'>
         <MyJumbotron />
       </div>
-      <AllTheBooks />
-      <div>
+      <BookList />
+      <div className='div__footer'>
         <MyFooter paraFooter="All rights reserved" mail="EpicBookstore@epicmail.com" />
       </div>
     </div>

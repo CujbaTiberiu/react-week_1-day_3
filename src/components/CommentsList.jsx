@@ -6,7 +6,7 @@ class CommentsList extends Component {
     return (
       <ListGroup>
         {this.props.commentslist.map((comment) => (
-          <ListGroup.Item key={this.props.commentslist.elementId}>
+          <ListGroup.Item key={comment.elementId}>
             {comment.comment}|{comment.rate}
           </ListGroup.Item>
         ))}

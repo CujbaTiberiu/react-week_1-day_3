@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CommentsList from "./CommentsList";
-import ErrorBoundary from "./ErrorBoundary";
+//import ErrorBoundary from "./ErrorBoundary";
 
 class CommentArea extends Component {
   state = {
@@ -8,9 +8,7 @@ class CommentArea extends Component {
   };
 
   componentDidMount() {
-    if (this.props.selectedCard) {
-      this.getComment();
-    }
+    this.getComment();
   }
 
   getComment = async () => {
@@ -40,13 +38,9 @@ class CommentArea extends Component {
 
   render() {
     return (
-      <ErrorBoundary>
-        {this.props.selectedCard ? (
-          <CommentsList commentslist={this.state.comments} />
-        ) : (
-          "Loading..."
-        )}
-      </ErrorBoundary>
+      <>
+        <CommentsList commentsList={this.state.comments} />
+      </>
     );
   }
 }

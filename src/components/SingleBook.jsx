@@ -34,10 +34,14 @@ class SingleBook extends Component {
             <Button variant="primary">Buy now!</Button>
           </Card.Body>
         </Card>
-        <CommentArea
-          bookId={this.props.book.asin}
-          selectedCard={this.selectedCard}
-        />
+        {this.selectedCard ? (
+          <CommentArea
+            bookId={this.props.book.asin}
+            selectedCard={this.selectedCard}
+          />
+        ) : (
+          "Loading..."
+        )}
       </>
     );
   }

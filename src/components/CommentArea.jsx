@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import CommentsList from "./CommentsList";
-//import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "./ErrorBoundary";
 
 class CommentArea extends Component {
   state = {
-    comments: null,
+    comments: [],
   };
 
   componentDidMount() {
-    this.getComment();
+    console.log("componentDidMount called");
+    this.getComments();
   }
 
-  getComment = async () => {
+  //   componentDidUpdate(prevProps) {
+  //     if (prevProps.bookId !== this.props.bookId) {
+  //       this.getComment();
+  //     }
+  //   }
+  getComments = async () => {
     try {
       let resp = await fetch(
         `https://striveschool-api.herokuapp.com/api/comments/${this.props.bookId}`,
@@ -24,10 +30,10 @@ class CommentArea extends Component {
       );
       if (resp.ok) {
         let comments = await resp.json();
+        console.log(comments);
         this.setState({
           comments: comments,
         });
-        console.log(comments);
       } else {
         console.log("error in request");
       }
@@ -36,10 +42,13 @@ class CommentArea extends Component {
     }
   };
 
+  //   this.props.selectedCard && this.state.comments
   render() {
     return (
       <>
-        <CommentsList commentsList={this.state.comments} />
+        <ErrorBoundary>
+          <CommentsList commentsList={this.state.comments} />
+        </ErrorBoundary>
       </>
     );
   }

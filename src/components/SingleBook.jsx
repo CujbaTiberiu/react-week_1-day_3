@@ -20,10 +20,13 @@ class SingleBook extends Component {
           className={`${
             this.state.selected ? "shadow-lg border border-4 border-danger" : ""
           }`}
-          onClick={this.selectedCard}
         >
           {/*al click della card cambia lo stato di selected a vero e si verifica la prima condizone del ternary*/}
-          <Card.Img variant="top" src={this.props.book.img} />
+          <Card.Img
+            variant="top"
+            src={this.props.book.img}
+            onClick={this.selectedCard}
+          />
           <Card.Body className="d-flex flex-column justify-content-between">
             <Card.Title>{this.props.book.title}</Card.Title>
             <Card.Text>
@@ -34,13 +37,11 @@ class SingleBook extends Component {
             <Button variant="primary">Buy now!</Button>
           </Card.Body>
         </Card>
-        {this.selectedCard ? (
+        {this.selectedCard && (
           <CommentArea
             bookId={this.props.book.asin}
-            selectedCard={this.selectedCard}
+            selectedCard={this.state.selectedCard}
           />
-        ) : (
-          "Loading..."
         )}
       </>
     );

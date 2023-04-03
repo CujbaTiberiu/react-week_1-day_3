@@ -5,8 +5,8 @@ class CommentsList extends Component {
   render() {
     return (
       <ListGroup>
-        {this.props.commentslist.map((comment) => (
-          <ListGroup.Item key={comment.elementId}>
+        {this.props.commentsList.map((comment, i) => (
+          <ListGroup.Item key={comment.elementId + i}>
             {comment.comment}|{comment.rate}
           </ListGroup.Item>
         ))}

@@ -7,7 +7,7 @@ import BookList from './components/BookList';
 //import fantasy from './data/fantasy.json'
 //import scifi from './data/scifi.json'
 import history from './data/history.json'
-
+console.log(history)
 
 function App() {
   return (

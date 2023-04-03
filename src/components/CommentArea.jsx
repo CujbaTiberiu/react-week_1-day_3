@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CommentsList from "./CommentsList";
 import ErrorBoundary from "./ErrorBoundary";
+import AddComment from "./AddComment";
 
 class CommentArea extends Component {
   state = {
@@ -49,6 +50,7 @@ class CommentArea extends Component {
       <>
         <ErrorBoundary>
           <CommentsList commentsList={this.state.comments} />
+          <AddComment bookId={this.props.bookId} />
         </ErrorBoundary>
       </>
     );

@@ -37,7 +37,7 @@ class SingleBook extends Component {
             <Button variant="primary">Buy now!</Button>
           </Card.Body>
         </Card>
-        {this.selectedCard && (
+        {this.state.selected && (
           <CommentArea
             bookId={this.props.book.asin}
             selectedCard={this.state.selectedCard}

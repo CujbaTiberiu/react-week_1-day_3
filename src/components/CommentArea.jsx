@@ -12,11 +12,12 @@ class CommentArea extends Component {
     this.getComments();
   }
 
-  //   componentDidUpdate(prevProps) {
-  //     if (prevProps.bookId !== this.props.bookId) {
-  //       this.getComment();
-  //     }
-  //   }
+  componentDidUpdate(prevProps) {
+    if (prevProps.bookId !== this.props.bookId) {
+      this.getComments();
+    }
+  }
+
   getComments = async () => {
     try {
       let resp = await fetch(

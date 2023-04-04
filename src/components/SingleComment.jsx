@@ -69,7 +69,7 @@ const SingleComment = ({ comment }) => {
   };
 
   return (
-    <ListGroup.Item className="d-flex justify-content-around">
+    <ListGroup.Item className="d-flex justify-content-between">
       {comment.comment} | {comment.rate}
       <Button
         variant="danger"

@@ -136,11 +136,9 @@ const AddComment = (props) => {
       if (resp.ok) {
         alert("Comment submited correctly!");
         setSingleComment({
-          singleComment: {
-            comment: "",
-            rate: 1,
-            elementId: props.bookId,
-          },
+          comment: "",
+          rate: 1,
+          elementId: props.bookId,
         });
       } else {
         console.log("error in call");
